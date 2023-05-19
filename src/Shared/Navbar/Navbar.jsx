@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_150x.webp";
 
 const Navbar = () => {
@@ -60,7 +61,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+          <Link to='/'>Home</Link>
           </li>
           <li tabIndex={0}>
             <a>
@@ -90,7 +91,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Shop now</a>
+        <Link to='/login'>
+        <button className="btn btn-outline text-teal-600 hover:bg-teal-700">Login</button>
+        </Link>
       </div>
     </div>
   );

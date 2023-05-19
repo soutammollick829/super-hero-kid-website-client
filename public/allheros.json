@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Iron Man",
+        "alias": "Tony Stark",
+        "alignment": "Good",
+        "powers": ["Genius-level intellect", "Powered armor suit", "Flight", "Repulsor beams"],
+        "firstAppearance": "Tales of Suspense #39",
+        "image": "https://example.com/images/iron_man.jpg"
+      },
+      {
+        "name": "Spider-Man",
+        "alias": "Peter Parker",
+        "alignment": "Good",
+        "powers": ["Wall-crawling", "Superhuman strength", "Spider-sense", "Web-shooters"],
+        "firstAppearance": "Amazing Fantasy #15",
+        "image": "https://example.com/images/spider_man.jpg"
+      },
+      {
+        "name": "Black Widow",
+        "alias": "Natasha Romanoff",
+        "alignment": "Good",
+        "powers": ["Master spy", "Expert martial artist", "Acrobatics", "Weapons expertise"],
+        "firstAppearance": "Tales of Suspense #52",
+        "image": "https://example.com/images/black_widow.jpg"
+      },
+      {
+        "name": "Captain America",
+        "alias": "Steve Rogers",
+        "alignment": "Good",
+        "powers": ["Superhuman strength", "Enhanced agility", "Indomitable will", "Vibranium shield"],
+        "firstAppearance": "Captain America Comics #1",
+        "image": "https://example.com/images/captain_america.jpg"
+      },
+      {
+        "name": "Thor",
+        "alias": "Thor Odinson",
+        "alignment": "Good",
+        "powers": ["Godly strength", "Control over lightning", "Mjolnir hammer", "Flight"],
+        "firstAppearance": "Journey into Mystery #83",
+        "image": "https://example.com/images/thor.jpg"
+      },
+      {
+        "name": "Hulk",
+        "alias": "Bruce Banner",
+        "alignment": "Good",
+        "powers": ["Superhuman strength", "Invulnerability", "Regenerative healing factor", "Unlimited rage"],
+        "firstAppearance": "The Incredible Hulk #1",
+        "image": "https://example.com/images/hulk.jpg"
+      }
+]

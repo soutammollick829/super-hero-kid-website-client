@@ -1,28 +1,62 @@
 [
-      { "id":"1",
-        "name": "Optimus Prime",
-        "series": "Transformers: Generation 1",
-        "year": 1984,
-        "price": 49.99,
-        "description": "Optimus Prime is the brave and noble leader of the Autobots. He transforms into a red and blue semi-truck and wields a powerful energy axe.",
-        "image": "https://i.ibb.co/5rbyQp3/89b93f16b5825be51ad8e98dd6e22b56.jpg"
-      },
-      {
-        "name": "Bumblebee",
-        "series": "Transformers: Movie",
-        "year": 2007,
-        "price": 19.99,
-        "description": "Bumblebee is a small but courageous Autobot. He transforms into a yellow Chevrolet Camaro and is known for his loyalty to his friends.",
-        "image": "https://i.ibb.co/yqQf1NS/E7161-E7120-Transformers-Cybertron-67910.jpg"
-      },
-      {
-        "name": "Megatron",
-        "series": "Transformers: Generation 1",
-        "year": 1984,
-        "price": 59.99,
-        "description": "Megatron is the ruthless leader of the Decepticons. He transforms into a silver and purple Walther P38 pistol and is Optimus Prime's arch-enemy.",
-        "image": "https://i.ibb.co/BgbpLtm/images.jpg"
-      }
-    ]
-  
-  
+  {
+    "name": "Optimus Prime",
+    "series": "Transformers: Generation 1",
+    "year": 1984,
+    "price": 49.99,
+    "description": "Optimus Prime is the brave and noble leader of the Autobots. He transforms into a red and blue semi-truck and wields a powerful energy axe.",
+    "image": "https://example.com/images/optimus_prime.jpg",
+    "seller": {
+      "name": "Toy World",
+      "email": "toyworld@example.com"
+    },
+    "rating": 4.5,
+    "quantity": 10,
+    "details": "This Optimus Prime toy is highly detailed and comes with various articulation points. It includes a removable Matrix of Leadership and interchangeable hands."
+  },
+  {
+    "name": "Bumblebee",
+    "series": "Transformers: Movie",
+    "year": 2007,
+    "price": 19.99,
+    "description": "Bumblebee is a small but courageous Autobot. He transforms into a yellow Chevrolet Camaro and is known for his loyalty to his friends.",
+    "image": "https://example.com/images/bumblebee.jpg",
+    "seller": {
+      "name": "Toy Empire",
+      "email": "toyempire@example.com"
+    },
+    "rating": 4.2,
+    "quantity": 5,
+    "details": "This Bumblebee toy features a movie-inspired design and comes with a blaster accessory. It has a quick and easy transformation mechanism for young fans."
+  },
+  {
+    "name": "Megatron",
+    "series": "Transformers: Generation 1",
+    "year": 1984,
+    "price": 59.99,
+    "description": "Megatron is the ruthless leader of the Decepticons. He transforms into a silver and purple Walther P38 pistol and is Optimus Prime's arch-enemy.",
+    "image": "https://example.com/images/megatron.jpg",
+    "seller": {
+      "name": "Toys R Us",
+      "email": "toysrus@example.com"
+    },
+    "rating": 4.8,
+    "quantity": 8,
+    "details": "This Megatron toy features a sleek design and includes a fusion cannon accessory. It has multiple points of articulation for dynamic posing."
+  },
+  {
+    "name": "Bumblebee",
+    "series": "Transformers: Movie",
+    "year": 2007,
+    "price": 19.99,
+    "description": "Bumblebee is a small but courageous Autobot. He transforms into a yellow Chevrolet Camaro and is known for his loyalty to his friends.",
+    "image": "https://example.com/images/bumblebee.jpg",
+    "seller": {
+      "name": "Toy Empire",
+      "email": "toyempire@example.com"
+    },
+    "rating": 4.2,
+    "quantity": 5,
+    "details": "This Bumblebee toy features a movie-inspired design and comes with a blaster accessory. It has a quick and easy transformation mechanism for young fans."
+  }
+]
