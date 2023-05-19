@@ -18,7 +18,7 @@ const ToyProduct = () => {
             <h2 className="text-4xl font-bold">Our Toy Product</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, optio saepe. Perspiciatis, repellendus assumenda placeat consequatur eligendi nostrum iste culpa.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto mt-10">
             {
                 toyProducts.map(toy => <ProductCard key={toyProducts._id}
                     toy={toy}
