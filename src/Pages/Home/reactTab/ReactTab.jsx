@@ -9,7 +9,7 @@ import AvengerToyCard from "./avengerToy/AvengerToyCard";
 
 const ReactTab = () => {
   const [heroToys, setHeroToys] = useState();
-  const [category, setCategory] = useState('Transformers')
+  const [category, setCategory] = useState('Transformers Toy')
 
   useEffect(() => {
     fetch(`http://localhost:5000/toys`)
@@ -27,9 +27,9 @@ const ReactTab = () => {
     <div>
       <Tabs>
         <TabList>
-          <Tab onClick={()=>setCategory('Transformers toy')}>Transformers Toys</Tab>
-          <Tab onClick={()=>setCategory('Marvel toy')}>Marvel Toy</Tab>
-          <Tab onClick={()=>setCategory('Avenger toy')}>Avengers Toy</Tab>
+          <Tab onClick={()=>setCategory('Transformers toy')}><span className="font-bold text-teal-600">Transformers Toys</span></Tab>
+          <Tab onClick={()=>setCategory('Marvel toy')}><span className="font-bold text-teal-600">Marvel Toy</span></Tab>
+          <Tab onClick={()=>setCategory('Avenger toy')}><span className="font-bold text-teal-600">Avengers Toy</span></Tab>
         </TabList>
 
         

@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-          <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li tabIndex={0}>
             <a>
@@ -85,14 +85,18 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li>
-            <a>Blog</a>
-          </li>
+          <Link to='/blog'>
+            <li>
+              <a>Blog</a>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to='/login'>
-        <button className="btn btn-outline text-teal-600 hover:bg-teal-700">Login</button>
+        <Link to="/login">
+          <button className="btn btn-outline text-teal-600 hover:bg-teal-700">
+            Login
+          </button>
         </Link>
       </div>
     </div>

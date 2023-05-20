@@ -4,12 +4,15 @@ import Home from "../Pages/Home/home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/register/Register";
 import Order from "../Pages/Order/Order";
+import ErrorPage from "../Pages/Error/ErrorPage";
+import ViewDetails from "../Pages/ToyViewDetailes/ViewDetails";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      errorElement:<ErrorPage/>,
       children:[
         {
             path:'/',
@@ -27,6 +30,14 @@ const router = createBrowserRouter([
           path:'/order/:id',
           element:<Order/>,
           loader: ({params})=> fetch(`http://localhost:5000/transformer/${params.id}`)
+        },
+        {
+          path:'/view',
+          element:<ViewDetails/>
+        },
+        {
+          path:'*',
+          element:<ErrorPage/>
         }
       ]
     },
