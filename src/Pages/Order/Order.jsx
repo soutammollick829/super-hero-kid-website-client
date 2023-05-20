@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { FaArrowLeft, FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 
 const Order = () => {
   const order = useLoaderData();
@@ -15,6 +18,48 @@ const Order = () => {
     rating,
     quantity,
   } = order;
+  console.log(order);
+  const user = useContext(AuthContext);
+
+  const handelOrder = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const address = form.address.value;
+    const price = form.price.value;
+    console.log(name, email, address, price);
+    const customerOrder = {
+      customerName: name,
+      email,
+      address,
+      price,
+      productName: series,
+    };
+    console.log(customerOrder);
+
+    fetch(`http://localhost:5000/orders`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(customerOrder),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if(data.insertedId){
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your order has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
+  };
+
   return (
     <div className="mt-10">
       <div className="card card-side bg-base-100">
@@ -47,7 +92,7 @@ const Order = () => {
           </div>
         </div>
       </div>
-      <form>
+      <form onSubmit={handelOrder}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="form-control">
             <label className="label">
@@ -78,6 +123,8 @@ const Order = () => {
             </label>
             <input
               type="email"
+              name="email"
+              required
               placeholder="email"
               className="input input-bordered"
             />
@@ -88,13 +135,16 @@ const Order = () => {
             </label>
             <input
               type="text"
+              name="price"
               defaultValue={"$" + price}
               readOnly
               className="input input-bordered"
             />
           </div>
         </div>
-        <button className="btn btn-block mt-6">Confirm Order</button>
+        <button className="btn btn-block mt-6 bg-teal-600 hover:bg-teal-700">
+          Confirm Order
+        </button>
       </form>
     </div>
   );

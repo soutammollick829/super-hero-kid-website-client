@@ -3,6 +3,7 @@ import loginImg from "../../assets/images/login/bg-login.png";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 
 const Login = () => {
 const {loggedUser}= useContext(AuthContext);
@@ -12,6 +13,14 @@ const {loggedUser}= useContext(AuthContext);
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    if (password.length < 6) {
+      Swal.fire({
+        title: 'Invalid Password',
+        text: 'The password must be at least 6 characters long.',
+        icon: 'error',
+      });
+      return false; 
+    }
     console.log(email,password);
 
     loggedUser(email,password)
@@ -19,6 +28,20 @@ const {loggedUser}= useContext(AuthContext);
         const user = result.user;
         console.log(user);
         form.reset('');
+        if(user.email !== password){
+          Swal.fire({
+            title: 'Login Successful',
+            text: 'You have successfully logged in.',
+            icon: 'success',
+          });
+        } else {
+          Swal.fire({
+            title: 'Login Failed',
+            text: 'Invalid username or password.',
+            icon: 'error',
+          });
+          return false; 
+        }
     })
     .then(error =>{
         console.log(error);

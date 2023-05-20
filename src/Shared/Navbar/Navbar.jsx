@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_150x.webp";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const {user,logOut} = useContext(AuthContext);
+
+  const handelLogOut = ()=>{
+    logOut()
+    .then(()=>{
+
+    })
+    .catch(error => console.error(error))
+  }
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -85,6 +96,11 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+          { user && <Link to='/orders'>
+            <li>
+              <a>My Toys</a>
+            </li>
+          </Link>}
           <Link to='/blog'>
             <li>
               <a>Blog</a>
@@ -93,11 +109,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+      {user?.email ? <button onClick={handelLogOut} className="btn btn-outline text-teal-600 hover:bg-teal-700">
+            Log-Out
+          </button>:
         <Link to="/login">
           <button className="btn btn-outline text-teal-600 hover:bg-teal-700">
             Login
           </button>
-        </Link>
+        </Link>}
       </div>
     </div>
   );

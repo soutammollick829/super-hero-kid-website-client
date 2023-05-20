@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import registerImg from "../../assets/images/login/sign-up-concept-illustration_114360-7875.avif";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -22,6 +23,24 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         form.reset("");
+        if(user.email){
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
+        }
       })
       .then((error) => console.error(error));
   };
