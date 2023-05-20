@@ -5,7 +5,15 @@
         "alignment": "Good",
         "powers": ["Genius-level intellect", "Powered armor suit", "Flight", "Repulsor beams"],
         "firstAppearance": "Tales of Suspense #39",
-        "image": "https://example.com/images/iron_man.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/415OqklelHL.jpg",
+        "rating": 4.6,
+        "quantity": 7,
+        "price":55.50,
+        "subCategory":"Marvel toy",
+        "seller": {
+            "name": "amazon World",
+            "email": "toyamazonld@example.com"
+          }
       },
       {
         "name": "Spider-Man",
@@ -13,7 +21,15 @@
         "alignment": "Good",
         "powers": ["Wall-crawling", "Superhuman strength", "Spider-sense", "Web-shooters"],
         "firstAppearance": "Amazing Fantasy #15",
-        "image": "https://example.com/images/spider_man.jpg"
+        "image": "https://m.media-amazon.com/images/I/71i9qpoBMeL._SL1500_.jpg",
+        "rating": 4.8,
+        "quantity": 8,
+        "price":75.50,
+        "subCategory":"Marvel toy",
+        "seller": {
+            "name": "Toy World",
+            "email": "toyworld@example.com"
+          }
       },
       {
         "name": "Black Widow",
@@ -21,7 +37,15 @@
         "alignment": "Good",
         "powers": ["Master spy", "Expert martial artist", "Acrobatics", "Weapons expertise"],
         "firstAppearance": "Tales of Suspense #52",
-        "image": "https://example.com/images/black_widow.jpg"
+        "image": "https://m.media-amazon.com/images/I/71T1+OcB75S.jpg",
+        "rating": 4.9,
+        "quantity": 9,
+        "price":35.99,
+        "subCategory":"Marvel toy",
+        "seller": {
+            "name": "Toy Wor zoon",
+            "email": "toyworwewd@example.com"
+          }
       },
       {
         "name": "Captain America",
@@ -29,7 +53,11 @@
         "alignment": "Good",
         "powers": ["Superhuman strength", "Enhanced agility", "Indomitable will", "Vibranium shield"],
         "firstAppearance": "Captain America Comics #1",
-        "image": "https://example.com/images/captain_america.jpg"
+        "image": "https://shop.hasbro.com/_next/image?url=https%3A%2F%2Fwww.hasbro.com%2Fcommon%2Fproductimages%2Fen_US%2F4E0417F8E4884E09A0E28E86F8A4B75A%2F151b57629858a30d08d2a73ed289a413c5bf3929.jpg&w=828&q=75",
+        "subCategory":"Avenger toy",
+        "rating": 4.5,
+        "quantity": 12,
+        "price":25.50
       },
       {
         "name": "Thor",
@@ -37,7 +65,15 @@
         "alignment": "Good",
         "powers": ["Godly strength", "Control over lightning", "Mjolnir hammer", "Flight"],
         "firstAppearance": "Journey into Mystery #83",
-        "image": "https://example.com/images/thor.jpg"
+        "image": "https://m.media-amazon.com/images/I/71yli+JLbBL._AC_SX679_.jpg",
+        "rating": 4.5,
+        "quantity": 12,
+        "price":25.50,
+        "subCategory":"Avenger toy",
+        "seller": {
+            "name": "Toy kdz",
+            "email": "toyworld@example.com"
+          }
       },
       {
         "name": "Hulk",
@@ -45,6 +81,62 @@
         "alignment": "Good",
         "powers": ["Superhuman strength", "Invulnerability", "Regenerative healing factor", "Unlimited rage"],
         "firstAppearance": "The Incredible Hulk #1",
-        "image": "https://example.com/images/hulk.jpg"
+        "image": "https://m.media-amazon.com/images/I/71XboxdV4RL._AC_SL1500_.jpg",
+        "rating": 4.8,
+        "quantity": 8,
+        "price":75.50,
+        "subCategory":"Avenger toy",
+        "seller": {
+            "name": "Toy World",
+            "email": "toyworld@example.com"
+          }
+      },
+      {
+        "name": "Optimus Prime",
+        "series": "Transformers: Generation 1",
+        "year": 1984,
+        "price": 49.99,
+        "description": "Optimus Prime is the brave and noble leader of the Autobots. He transforms into a red and blue semi-truck and wields a powerful energy axe.",
+        "image": "https://lzd-img-global.slatic.net/g/p/4abbabe0e7bacf3d6579d3563b17e161.jpg_720x720q80.jpg_.webp",
+        "subCategory":"Transformers toy",
+        "seller": {
+          "name": "Toy World",
+          "email": "toyworld@example.com"
+        },
+        "rating": 4.5,
+        "quantity": 10,
+        "details": "This Optimus Prime toy is highly detailed and comes with various articulation points. It includes a removable Matrix of Leadership and interchangeable hands."
+      },
+      {
+        "name": "Bumblebee",
+        "series": "Transformers: Movie",
+        "year": 2007,
+        "price": 19.99,
+        "description": "Bumblebee is a small but courageous Autobot. He transforms into a yellow Chevrolet Camaro and is known for his loyalty to his friends.",
+        "image": "https://rukminim1.flixcart.com/image/416/416/k23m4cw0/action-figure/g/3/q/bumblebee-movie-toys-for-kids-transformers-original-imafhg7ychwvpuhf.jpeg?q=70",
+        "subCategory":"Transformers toy",
+        "seller": {
+          "name": "Toy Empire",
+          "email": "toyempire@example.com"
+        },
+        "rating": 4.2,
+        "quantity": 5,
+        "details": "This Bumblebee toy features a movie-inspired design and comes with a blaster accessory. It has a quick and easy transformation mechanism for young fans."
+      },
+      {
+        "name": "Megatron",
+        "series": "Transformers: Generation 1",
+        "year": 1984,
+        "price": 59.99,
+        "description": "Megatron is the ruthless leader of the Decepticons. He transforms into a silver and purple Walther P38 pistol and is Optimus Prime's arch-enemy.",
+        "image": "https://i5.walmartimages.ca/images/Large/125/133/6000204125133.jpg",
+        "subCategory":"Transformers toy",
+        "seller": {
+          "name": "Toys R Us",
+          "email": "toysrus@example.com"
+        },
+        "rating": 4.8,
+        "quantity": 8,
+        "details": "This Megatron toy features a sleek design and includes a fusion cannon accessory. It has multiple points of articulation for dynamic posing."
       }
 ]

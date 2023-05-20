@@ -14,7 +14,7 @@ const ToyProduct = () => {
     return (
         <div className="mt-20">
             <div className="text-center">
-            <p className="font-bold text-2xl text-teal-600">Transformers:{toyProducts.length}</p>
+            <p className="font-bold text-2xl text-teal-600">Transformers</p>
             <h2 className="text-4xl font-bold">Our Toy Product</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, optio saepe. Perspiciatis, repellendus assumenda placeat consequatur eligendi nostrum iste culpa.</p>
         </div>
