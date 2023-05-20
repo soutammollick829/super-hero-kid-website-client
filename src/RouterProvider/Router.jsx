@@ -32,8 +32,9 @@ const router = createBrowserRouter([
           loader: ({params})=> fetch(`http://localhost:5000/transformer/${params.id}`)
         },
         {
-          path:'/view',
-          element:<ViewDetails/>
+          path:'/view/:id',
+          element:<ViewDetails/>,
+          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
         },
         {
           path:'*',

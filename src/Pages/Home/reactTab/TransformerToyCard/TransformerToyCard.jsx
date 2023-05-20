@@ -3,7 +3,7 @@ import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const TransformerToyCard = ({ transformer }) => {
-  const { image, name, price, rating } = transformer;
+  const {_id, image, name, price, rating } = transformer;
   return (
     <div>
       <div className="card w-72 bg-base-100 border p-2">
@@ -21,7 +21,7 @@ const TransformerToyCard = ({ transformer }) => {
             fullSymbol={<FaStar />}
           />
           <div className="card-actions">
-            <Link to='/view'>
+            <Link to={`/view/${_id}`}>
               <button className="btn btn-sm bg-teal-600 hover:bg-teal-700">
                 View Details
               </button>
