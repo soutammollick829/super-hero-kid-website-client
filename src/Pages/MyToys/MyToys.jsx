@@ -6,7 +6,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
 
-  const url = `http://localhost:5000/orders`;
+  const url = `https://super-hero-kid-server.vercel.app/orders`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -14,7 +14,7 @@ const MyToys = () => {
   }, []);
 
 const handelUpdate = id =>{
-  fetch(`http://localhost:5000/orders/${id}`,{
+  fetch(`https://super-hero-kid-server.vercel.app/orders/${id}`,{
     method:'PUT',
     headers:{
       'content-type':'application/json'

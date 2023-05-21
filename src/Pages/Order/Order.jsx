@@ -38,7 +38,7 @@ const Order = () => {
     };
     console.log(customerOrder);
 
-    fetch(`http://localhost:5000/orders`, {
+    fetch(`https://super-hero-kid-server.vercel.app/orders`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

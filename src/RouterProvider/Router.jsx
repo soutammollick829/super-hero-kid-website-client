@@ -9,6 +9,7 @@ import ViewDetails from "../Pages/ToyViewDetailes/ViewDetails";
 import MyToys from "../Pages/MyToys/MyToys";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import AddToy from "../Pages/Add a toy/AddToy";
+import Blog from "../Pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -32,12 +33,12 @@ const router = createBrowserRouter([
         {
           path:'/order/:id',
           element:<PrivateRoute><Order/></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/transformer/${params.id}`)
+          loader: ({params})=> fetch(`https://super-hero-kid-server.vercel.app/transformer/${params.id}`)
         },
         {
           path:'/view/:id',
           element:<PrivateRoute><ViewDetails/></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://super-hero-kid-server.vercel.app/toys/${params.id}`)
         },
         {
           path:'/orders',
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         {
           path:'/addToy',
           element:<AddToy/>
+        },
+        {
+          path:'/blog',
+          element:<Blog/>
         },
         {
           path:'*',

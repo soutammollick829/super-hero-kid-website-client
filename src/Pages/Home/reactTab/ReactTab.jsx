@@ -12,7 +12,7 @@ const ReactTab = () => {
   const [category, setCategory] = useState('Transformers Toy')
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys`)
+    fetch(`https://super-hero-kid-server.vercel.app/toys`)
       .then((res) => res.json())
       .then((data) => {
         if(data.length){

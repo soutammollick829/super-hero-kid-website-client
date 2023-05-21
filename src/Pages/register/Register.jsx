@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,handelSignGoogle } = useContext(AuthContext);
 
   const handelSignUp = (event) => {
     event.preventDefault();
@@ -116,7 +116,7 @@ const Register = () => {
             </h2>
             <div className="mx-auto mb-5">
               <h2 className="text-xl font-semibold">Sign Up</h2>
-              <FaGoogle className="ml-8 text-2xl mt-5 text-teal-600" />
+              <FaGoogle onClick={handelSignGoogle} className="ml-8 text-2xl mt-5 text-teal-600" />
             </div>
           </div>
         </div>

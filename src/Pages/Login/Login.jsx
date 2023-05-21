@@ -6,7 +6,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const Login = () => {
-const {loggedUser}= useContext(AuthContext);
+const {loggedUser,handelSignGoogle}= useContext(AuthContext);
 
 const location = useLocation();
 const navigate = useNavigate();
@@ -47,7 +47,7 @@ const from = location.state?.from?.pathname || '/';
           });
           return false; 
         }
-        navigate(from, {replace: true})
+        navigate(from, {replace: tr})
     })
     .then(error =>{
         console.log(error);
@@ -108,7 +108,7 @@ const from = location.state?.from?.pathname || '/';
             </h2>
             <div className="mx-auto mb-5">
               <h2 className="text-xl font-semibold">Login with</h2>
-              <FaGoogle className="ml-8 text-2xl mt-5 text-teal-600" />
+              <FaGoogle onClick={handelSignGoogle} className="ml-8 text-2xl mt-5 text-teal-600" />
             </div>
           </div>
         </div>
