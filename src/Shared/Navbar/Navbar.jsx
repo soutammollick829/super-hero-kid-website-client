@@ -87,18 +87,15 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2">
-              <li>
-                <a>Submenu 1</a>
-              </li>
-              <li>
-                <a>Submenu 2</a>
-              </li>
-            </ul>
           </li>
           { user && <Link to='/orders'>
             <li>
               <a>My Toys</a>
+            </li>
+          </Link>}
+          { user && <Link to='/addToy'>
+            <li>
+              <a>Add a Toy</a>
             </li>
           </Link>}
           <Link to='/blog'>
@@ -109,9 +106,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      {user?.email ? <button onClick={handelLogOut} className="btn btn-outline text-teal-600 hover:bg-teal-700">
+      {user?.email ? <>
+          <div className="w-10 rounded-full">
+          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        </div>
+        <button onClick={handelLogOut} className="btn btn-outline text-teal-600 hover:bg-teal-700">
             Log-Out
-          </button>:
+          </button>
+      </>:
         <Link to="/login">
           <button className="btn btn-outline text-teal-600 hover:bg-teal-700">
             Login

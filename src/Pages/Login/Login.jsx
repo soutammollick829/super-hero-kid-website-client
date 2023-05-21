@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/images/login/bg-login.png";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
@@ -7,6 +7,11 @@ import Swal from 'sweetalert2'
 
 const Login = () => {
 const {loggedUser}= useContext(AuthContext);
+
+const location = useLocation();
+const navigate = useNavigate();
+
+const from = location.state?.from?.pathname || '/';
 
   const handelLogin = (event) => {
     event.preventDefault();
@@ -42,6 +47,7 @@ const {loggedUser}= useContext(AuthContext);
           });
           return false; 
         }
+        navigate(from, {replace: true})
     })
     .then(error =>{
         console.log(error);

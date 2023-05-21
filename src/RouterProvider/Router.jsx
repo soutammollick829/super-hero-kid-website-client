@@ -7,6 +7,8 @@ import Order from "../Pages/Order/Order";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import ViewDetails from "../Pages/ToyViewDetailes/ViewDetails";
 import MyToys from "../Pages/MyToys/MyToys";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import AddToy from "../Pages/Add a toy/AddToy";
 
 
 const router = createBrowserRouter([
@@ -29,17 +31,21 @@ const router = createBrowserRouter([
         },
         {
           path:'/order/:id',
-          element:<Order/>,
+          element:<PrivateRoute><Order/></PrivateRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/transformer/${params.id}`)
         },
         {
           path:'/view/:id',
-          element:<ViewDetails/>,
+          element:<PrivateRoute><ViewDetails/></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
         },
         {
           path:'/orders',
           element:<MyToys/>
+        },
+        {
+          path:'/addToy',
+          element:<AddToy/>
         },
         {
           path:'*',
