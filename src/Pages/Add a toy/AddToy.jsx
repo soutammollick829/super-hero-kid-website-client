@@ -108,8 +108,7 @@ const AddToy = () => {
         </div>
       </div>
     <textarea
-    name="Detail
-"
+    name="detail"
     placeholder="Detail description
 "
     className="textarea textarea-bordered textarea-md w-full mt-10"

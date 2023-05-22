@@ -11,6 +11,7 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
 
     const handelSignGoogle = () =>{
+        setLoading(true);
         signInWithPopup(auth,provider)
     }
 
