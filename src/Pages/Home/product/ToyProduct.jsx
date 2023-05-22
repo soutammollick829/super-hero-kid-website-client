@@ -7,7 +7,7 @@ const ToyProduct = () => {
     const [toyProducts,setToyProducts] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://super-hero-kid-server.vercel.app/transformer`)
+        fetch(`https://super-hero-kid-server-soutammollick829.vercel.app/transformer`)
         .then(res => res.json())
         .then(data => setToyProducts(data))
     },[])

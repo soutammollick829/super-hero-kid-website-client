@@ -47,7 +47,7 @@ const from = location.state?.from?.pathname || '/';
           });
           return false; 
         }
-        navigate(from, {replace: tr})
+        navigate(from, {replace: true})
     })
     .then(error =>{
         console.log(error);
